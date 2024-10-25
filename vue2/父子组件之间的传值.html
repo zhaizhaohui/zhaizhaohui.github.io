@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>父子组件之间的传值 | BenHang</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="BenHang&#39;s Web Develop Note">
+    
+    <link rel="preload" href="/assets/css/0.styles.f05e7e7b.css" as="style"><link rel="preload" href="/assets/js/app.eae8d1ec.js" as="script"><link rel="preload" href="/assets/js/2.ff955ed9.js" as="script"><link rel="preload" href="/assets/js/1.89a667e6.js" as="script"><link rel="preload" href="/assets/js/27.fac79806.js" as="script"><link rel="prefetch" href="/assets/js/10.b1283d2b.js"><link rel="prefetch" href="/assets/js/11.dac10d56.js"><link rel="prefetch" href="/assets/js/12.b276a2dd.js"><link rel="prefetch" href="/assets/js/13.394647c9.js"><link rel="prefetch" href="/assets/js/14.8684b587.js"><link rel="prefetch" href="/assets/js/15.c7107f05.js"><link rel="prefetch" href="/assets/js/16.e7266602.js"><link rel="prefetch" href="/assets/js/17.71408a99.js"><link rel="prefetch" href="/assets/js/18.ddeb2228.js"><link rel="prefetch" href="/assets/js/19.2c37adce.js"><link rel="prefetch" href="/assets/js/20.10f317b0.js"><link rel="prefetch" href="/assets/js/21.d9ce1b6e.js"><link rel="prefetch" href="/assets/js/22.30c625ff.js"><link rel="prefetch" href="/assets/js/23.cb0384fd.js"><link rel="prefetch" href="/assets/js/24.a3949644.js"><link rel="prefetch" href="/assets/js/25.592621d3.js"><link rel="prefetch" href="/assets/js/26.bad1cf15.js"><link rel="prefetch" href="/assets/js/28.102cd7cc.js"><link rel="prefetch" href="/assets/js/3.ee6a6a1f.js"><link rel="prefetch" href="/assets/js/4.fd547eeb.js"><link rel="prefetch" href="/assets/js/5.37cedb6e.js"><link rel="prefetch" href="/assets/js/6.139680f0.js"><link rel="prefetch" href="/assets/js/7.905c0858.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.d28eab8b.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.f05e7e7b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">BenHang</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/html/" class="nav-link">
+  HTML
+</a></div><div class="nav-item"><a href="/vue2/" class="nav-link router-link-active">
+  Vue2
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/html/" class="nav-link">
+  HTML
+</a></div><div class="nav-item"><a href="/vue2/" class="nav-link router-link-active">
+  Vue2
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Vue2</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue2/脚手架的搭建.html" class="sidebar-link">脚手架的搭建</a></li><li><a href="/vue2/父子组件之间的传值.html" class="active sidebar-link">父子组件之间的传值</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vue2/父子组件之间的传值.html#父组件向子组件传值" class="sidebar-link">父组件向子组件传值</a></li><li class="sidebar-sub-header"><a href="/vue2/父子组件之间的传值.html#子组件向父组件传值" class="sidebar-link">子组件向父组件传值</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="父子组件之间的传值"><a href="#父子组件之间的传值" class="header-anchor">#</a> 父子组件之间的传值</h1> <h2 id="父组件向子组件传值"><a href="#父组件向子组件传值" class="header-anchor">#</a> 父组件向子组件传值</h2> <h3 id="_1、在父组件中通过属性的形式向子组件传值"><a href="#_1、在父组件中通过属性的形式向子组件传值" class="header-anchor">#</a> 1、在父组件中通过属性的形式向子组件传值</h3> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>child-components</span> <span class="token attr-name">:city</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>citys<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>child-components</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="_2、在父组件中的js中"><a href="#_2、在父组件中的js中" class="header-anchor">#</a> 2、在父组件中的js中</h3> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+	<span class="token operator">...</span>
+	<span class="token function">data</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">return</span> <span class="token punctuation">{</span>
+			<span class="token comment">// 此处citys是为了与传过去的city区分，更加明了数据传递的命名</span>
+			<span class="token comment">// 当然在传递的时候也可以命名为city</span>
+			<span class="token literal-property property">citys</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token operator">...</span><span class="token punctuation">]</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h3 id="_3、props"><a href="#_3、props" class="header-anchor">#</a> 3、props</h3> <p>在子组件中的js中，使用props接受传过来的数据</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+	<span class="token operator">...</span>
+	<span class="token literal-property property">props</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+		<span class="token comment">// prop是以对象的形式书写的</span>
+		<span class="token literal-property property">city</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+			<span class="token comment">// type形式也可以是字符串或其他</span>
+			<span class="token literal-property property">type</span><span class="token operator">:</span> Array<span class="token punctuation">,</span>
+			<span class="token literal-property property">required</span><span class="token operator">:</span> <span class="token boolean">true</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h2 id="子组件向父组件传值"><a href="#子组件向父组件传值" class="header-anchor">#</a> 子组件向父组件传值</h2> <h3 id="_1、在子组件中定义一个传值的方法"><a href="#_1、在子组件中定义一个传值的方法" class="header-anchor">#</a> 1、在子组件中定义一个传值的方法</h3> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>butto</span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>childClick<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>点我<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="_2、-emit"><a href="#_2、-emit" class="header-anchor">#</a> 2、$emit</h3> <p>在子组件中的js中通过$emit向父组件传值</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token literal-property property">methods</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+	<span class="token operator">...</span><span class="token operator">...</span>
+  	<span class="token function">childClick</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  		<span class="token comment">// 第一个参数childByValue是在父组件on监听的方法</span>
+		<span class="token comment">// 第二个参数this.childValue是需要传的值</span>
+    	<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$emit</span><span class="token punctuation">(</span><span class="token string">'childByValue'</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>childValue<span class="token punctuation">)</span>
+  	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h3 id="_3、on"><a href="#_3、on" class="header-anchor">#</a> 3、on</h3> <p>在父组件中引入子组件，定义一个监听子组件状态的方法(on)</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>child</span> <span class="token attr-name"><span class="token namespace">v-on:</span>childByValue</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>childByValue<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>child</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="_4、childvalue"><a href="#_4、childvalue" class="header-anchor">#</a> 4、childValue</h3> <p>在父组件的js中，通过childValue接受子组件传过来的值</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+	<span class="token literal-property property">components</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+		child
+	<span class="token punctuation">}</span><span class="token punctuation">,</span>
+	 <span class="token literal-property property">methods</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+			<span class="token function">childByValue</span> <span class="token punctuation">(</span><span class="token parameter">childValue</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> childValue
+	  	<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vue2/脚手架的搭建.html" class="prev">
+        脚手架的搭建
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.eae8d1ec.js" defer></script><script src="/assets/js/2.ff955ed9.js" defer></script><script src="/assets/js/1.89a667e6.js" defer></script><script src="/assets/js/27.fac79806.js" defer></script>
+  </body>
+</html>
