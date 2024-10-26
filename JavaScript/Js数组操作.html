@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Js数组操作 | BenHang</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="BenHang&#39;s Web Develop Note">
+    
+    <link rel="preload" href="/assets/css/0.styles.7911914d.css" as="style"><link rel="preload" href="/assets/js/app.2e68870f.js" as="script"><link rel="preload" href="/assets/js/2.2b22f60d.js" as="script"><link rel="preload" href="/assets/js/1.ac6c8be2.js" as="script"><link rel="preload" href="/assets/js/34.de8ef550.js" as="script"><link rel="prefetch" href="/assets/js/10.32b47deb.js"><link rel="prefetch" href="/assets/js/11.e6be3db3.js"><link rel="prefetch" href="/assets/js/12.2b9bad42.js"><link rel="prefetch" href="/assets/js/13.9fb6e9d8.js"><link rel="prefetch" href="/assets/js/14.4b0da003.js"><link rel="prefetch" href="/assets/js/15.c7107f05.js"><link rel="prefetch" href="/assets/js/16.55dcdebd.js"><link rel="prefetch" href="/assets/js/17.71408a99.js"><link rel="prefetch" href="/assets/js/18.ddeb2228.js"><link rel="prefetch" href="/assets/js/19.2c37adce.js"><link rel="prefetch" href="/assets/js/20.af830020.js"><link rel="prefetch" href="/assets/js/21.2ea33cda.js"><link rel="prefetch" href="/assets/js/22.3c9f59cc.js"><link rel="prefetch" href="/assets/js/23.b316faa0.js"><link rel="prefetch" href="/assets/js/24.be9abfc1.js"><link rel="prefetch" href="/assets/js/25.e89dc680.js"><link rel="prefetch" href="/assets/js/26.1b3542e1.js"><link rel="prefetch" href="/assets/js/27.ecbf1e14.js"><link rel="prefetch" href="/assets/js/28.7d3e5027.js"><link rel="prefetch" href="/assets/js/29.5c7a648f.js"><link rel="prefetch" href="/assets/js/3.ee6a6a1f.js"><link rel="prefetch" href="/assets/js/30.47917b35.js"><link rel="prefetch" href="/assets/js/31.eeb21777.js"><link rel="prefetch" href="/assets/js/32.b5b6fff8.js"><link rel="prefetch" href="/assets/js/33.3df729c3.js"><link rel="prefetch" href="/assets/js/35.dd0a5ccb.js"><link rel="prefetch" href="/assets/js/36.34788047.js"><link rel="prefetch" href="/assets/js/37.c50b79cb.js"><link rel="prefetch" href="/assets/js/38.2cb212ec.js"><link rel="prefetch" href="/assets/js/39.9c8f7ce5.js"><link rel="prefetch" href="/assets/js/4.0c187c31.js"><link rel="prefetch" href="/assets/js/40.fbb0f9c6.js"><link rel="prefetch" href="/assets/js/41.c2b55653.js"><link rel="prefetch" href="/assets/js/42.9e70e5f9.js"><link rel="prefetch" href="/assets/js/43.68b9bff6.js"><link rel="prefetch" href="/assets/js/44.da53bc02.js"><link rel="prefetch" href="/assets/js/45.8c200075.js"><link rel="prefetch" href="/assets/js/46.a5002205.js"><link rel="prefetch" href="/assets/js/47.6c979478.js"><link rel="prefetch" href="/assets/js/48.f496444f.js"><link rel="prefetch" href="/assets/js/49.20683414.js"><link rel="prefetch" href="/assets/js/5.c1bf2450.js"><link rel="prefetch" href="/assets/js/50.7d769e3a.js"><link rel="prefetch" href="/assets/js/51.25a1865b.js"><link rel="prefetch" href="/assets/js/52.c9c48596.js"><link rel="prefetch" href="/assets/js/53.8380733a.js"><link rel="prefetch" href="/assets/js/54.eb6aa941.js"><link rel="prefetch" href="/assets/js/55.b204ae9a.js"><link rel="prefetch" href="/assets/js/56.8f272f36.js"><link rel="prefetch" href="/assets/js/57.725d44ae.js"><link rel="prefetch" href="/assets/js/58.2af5225e.js"><link rel="prefetch" href="/assets/js/59.91fa226b.js"><link rel="prefetch" href="/assets/js/6.e848c396.js"><link rel="prefetch" href="/assets/js/60.492867f3.js"><link rel="prefetch" href="/assets/js/61.6077bc1e.js"><link rel="prefetch" href="/assets/js/62.cfde58f9.js"><link rel="prefetch" href="/assets/js/63.30de9ba1.js"><link rel="prefetch" href="/assets/js/64.f8a6e831.js"><link rel="prefetch" href="/assets/js/65.5b4d505e.js"><link rel="prefetch" href="/assets/js/66.0810c3ef.js"><link rel="prefetch" href="/assets/js/67.25c39a56.js"><link rel="prefetch" href="/assets/js/68.17f2be11.js"><link rel="prefetch" href="/assets/js/69.0fd3ee60.js"><link rel="prefetch" href="/assets/js/7.48c7c86b.js"><link rel="prefetch" href="/assets/js/70.35abf7f8.js"><link rel="prefetch" href="/assets/js/71.d0ad5db4.js"><link rel="prefetch" href="/assets/js/72.83529f99.js"><link rel="prefetch" href="/assets/js/73.adff8cfb.js"><link rel="prefetch" href="/assets/js/74.d4e26bc2.js"><link rel="prefetch" href="/assets/js/75.a3bc3b3a.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.4dff5a50.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7911914d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">BenHang</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Web" class="dropdown-title"><span class="title">Web</span> <span class="arrow down"></span></button> <button type="button" aria-label="Web" class="mobile-dropdown-title"><span class="title">Web</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/JavaScript/" class="nav-link router-link-active">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/ECMA/" class="nav-link">
+  ECMA
+</a></li></ul></div></div><div class="nav-item"><a href="/TypeScript/" class="nav-link">
+  TypeScript
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue2/" class="nav-link">
+  Vue2
+</a></li><li class="dropdown-item"><!----> <a href="/vue3/" class="nav-link">
+  Vue3
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress/" class="nav-link">
+  VuePress
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Library" class="dropdown-title"><span class="title">Library</span> <span class="arrow down"></span></button> <button type="button" aria-label="Library" class="mobile-dropdown-title"><span class="title">Library</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/jquery/" class="nav-link">
+  JQuery
+</a></li><li class="dropdown-item"><!----> <a href="/EChart/" class="nav-link">
+  EChart
+</a></li></ul></div></div><div class="nav-item"><a href="/Doc/" class="nav-link">
+  Doc
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Web" class="dropdown-title"><span class="title">Web</span> <span class="arrow down"></span></button> <button type="button" aria-label="Web" class="mobile-dropdown-title"><span class="title">Web</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/JavaScript/" class="nav-link router-link-active">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/ECMA/" class="nav-link">
+  ECMA
+</a></li></ul></div></div><div class="nav-item"><a href="/TypeScript/" class="nav-link">
+  TypeScript
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue2/" class="nav-link">
+  Vue2
+</a></li><li class="dropdown-item"><!----> <a href="/vue3/" class="nav-link">
+  Vue3
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress/" class="nav-link">
+  VuePress
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Library" class="dropdown-title"><span class="title">Library</span> <span class="arrow down"></span></button> <button type="button" aria-label="Library" class="mobile-dropdown-title"><span class="title">Library</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/jquery/" class="nav-link">
+  JQuery
+</a></li><li class="dropdown-item"><!----> <a href="/EChart/" class="nav-link">
+  EChart
+</a></li></ul></div></div><div class="nav-item"><a href="/Doc/" class="nav-link">
+  Doc
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>JavaScript</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/JavaScript/Js数组操作.html" class="active sidebar-link">Js数组操作</a></li><li><a href="/JavaScript/Js判断各种数据类型.html" class="sidebar-link">Js判断各种数据类型</a></li><li><a href="/JavaScript/Js判断是否为空.html" class="sidebar-link">Js判断是否为空</a></li><li><a href="/JavaScript/使用ul仿下拉菜单.html" class="sidebar-link">使用ul仿下拉菜单</a></li><li><a href="/JavaScript/Js图片分割.html" class="sidebar-link">Js图片分割</a></li><li><a href="/JavaScript/textarea高度自适应.html" class="sidebar-link">textarea高度自适应</a></li><li><a href="/JavaScript/Js跨域方法.html" class="sidebar-link">Js跨域方法</a></li><li><a href="/JavaScript/Seajs的使用.html" class="sidebar-link">Seajs的使用</a></li><li><a href="/JavaScript/falsy.html" class="sidebar-link">falsy</a></li><li><a href="/JavaScript/UnderscoreJs.html" class="sidebar-link">UnderscoreJs</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="js数组操作"><a href="#js数组操作" class="header-anchor">#</a> Js数组操作</h1> <p>案例数组</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>1、删除原数组第一项</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code>a<span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">// [2,3,4,5]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>2、删除原数组最后一项</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code>a<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">// [1,2,3,4]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>3、添加到数组开头，并返回数组长度</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code>a<span class="token punctuation">.</span><span class="token function">unshift</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token comment">// [-1,-2,1,2,3,4,5]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>4、添加到数组尾部，并返回数组长度</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code>a<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span>
+<span class="token comment">// [1,2,3,4,5,6]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>5、添加到数组尾部，并返回一个新数组</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code>a<span class="token punctuation">.</span><span class="token function">contact</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span>
+<span class="token comment">// [1,2,3,4,5,6]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>6、数组反序</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code>a<span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">// [5,4,3,2,1]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>7、按指定的参数对数组进行排序</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code>a<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">// [1,2,3,4,5]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>8、返回从原数组中指定开始下标到结束下标之间的项组成的新数组</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code>a<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span>
+<span class="token comment">// [3,4,5]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>9、将数组的元素组起一个字符串，以separator为分隔符，省略的话则用默认用逗号为分隔符</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code>a<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">'|'</span><span class="token punctuation">)</span>
+<span class="token comment">// '1|2|3|4|5'</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>10、从指定下标位置删除指定长度的项，并插入新的内容。返回删除后的数组
+一般用于数组的替换和指定项的删除</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">var</span> b <span class="token operator">=</span> a<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">)</span>
+<span class="token comment">// a:[1,2,7,8,9,5]</span>
+<span class="token comment">// b:[3,4]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/JavaScript/Js判断各种数据类型.html">
+        Js判断各种数据类型
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.2e68870f.js" defer></script><script src="/assets/js/2.2b22f60d.js" defer></script><script src="/assets/js/1.ac6c8be2.js" defer></script><script src="/assets/js/34.de8ef550.js" defer></script>
+  </body>
+</html>
