@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>wangEditor自定义图片上传 | BenHang</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="BenHang&#39;s Web Develop Note">
+    
+    <link rel="preload" href="/assets/css/0.styles.7911914d.css" as="style"><link rel="preload" href="/assets/js/app.ed3c4a1c.js" as="script"><link rel="preload" href="/assets/js/2.2b22f60d.js" as="script"><link rel="preload" href="/assets/js/1.ac6c8be2.js" as="script"><link rel="preload" href="/assets/js/92.2c277a0a.js" as="script"><link rel="prefetch" href="/assets/js/10.32b47deb.js"><link rel="prefetch" href="/assets/js/100.bf7229df.js"><link rel="prefetch" href="/assets/js/101.8ecaf894.js"><link rel="prefetch" href="/assets/js/102.c9aa7135.js"><link rel="prefetch" href="/assets/js/103.194c69e9.js"><link rel="prefetch" href="/assets/js/104.1f72cbf9.js"><link rel="prefetch" href="/assets/js/105.19163d00.js"><link rel="prefetch" href="/assets/js/106.0329fc31.js"><link rel="prefetch" href="/assets/js/107.6c867397.js"><link rel="prefetch" href="/assets/js/108.4a0a87a3.js"><link rel="prefetch" href="/assets/js/109.fdcc7be7.js"><link rel="prefetch" href="/assets/js/11.e6be3db3.js"><link rel="prefetch" href="/assets/js/110.04184aec.js"><link rel="prefetch" href="/assets/js/12.2b9bad42.js"><link rel="prefetch" href="/assets/js/13.9fb6e9d8.js"><link rel="prefetch" href="/assets/js/14.4b0da003.js"><link rel="prefetch" href="/assets/js/15.c7107f05.js"><link rel="prefetch" href="/assets/js/16.55dcdebd.js"><link rel="prefetch" href="/assets/js/17.71408a99.js"><link rel="prefetch" href="/assets/js/18.ddeb2228.js"><link rel="prefetch" href="/assets/js/19.2c37adce.js"><link rel="prefetch" href="/assets/js/20.af830020.js"><link rel="prefetch" href="/assets/js/21.2eca76f9.js"><link rel="prefetch" href="/assets/js/22.3c9f59cc.js"><link rel="prefetch" href="/assets/js/23.45d62cbf.js"><link rel="prefetch" href="/assets/js/24.9bf2b224.js"><link rel="prefetch" href="/assets/js/25.5be88157.js"><link rel="prefetch" href="/assets/js/26.b21a7686.js"><link rel="prefetch" href="/assets/js/27.56982513.js"><link rel="prefetch" href="/assets/js/28.d4c26b1d.js"><link rel="prefetch" href="/assets/js/29.aa16f315.js"><link rel="prefetch" href="/assets/js/3.ee6a6a1f.js"><link rel="prefetch" href="/assets/js/30.feca0d9b.js"><link rel="prefetch" href="/assets/js/31.28c2e154.js"><link rel="prefetch" href="/assets/js/32.cd50d246.js"><link rel="prefetch" href="/assets/js/33.da5a1759.js"><link rel="prefetch" href="/assets/js/34.94e3c8f9.js"><link rel="prefetch" href="/assets/js/35.2b2bf513.js"><link rel="prefetch" href="/assets/js/36.fa2eadd3.js"><link rel="prefetch" href="/assets/js/37.0f661078.js"><link rel="prefetch" href="/assets/js/38.0b6a36e9.js"><link rel="prefetch" href="/assets/js/39.aa6dca1b.js"><link rel="prefetch" href="/assets/js/4.0c187c31.js"><link rel="prefetch" href="/assets/js/40.06d7fa57.js"><link rel="prefetch" href="/assets/js/41.b5d4c00f.js"><link rel="prefetch" href="/assets/js/42.af4bbfed.js"><link rel="prefetch" href="/assets/js/43.2a317583.js"><link rel="prefetch" href="/assets/js/44.050b260b.js"><link rel="prefetch" href="/assets/js/45.fd3d548c.js"><link rel="prefetch" href="/assets/js/46.f3aed0d8.js"><link rel="prefetch" href="/assets/js/47.0735e60c.js"><link rel="prefetch" href="/assets/js/48.a4c06223.js"><link rel="prefetch" href="/assets/js/49.9be0cd97.js"><link rel="prefetch" href="/assets/js/5.c1bf2450.js"><link rel="prefetch" href="/assets/js/50.f69dd2e0.js"><link rel="prefetch" href="/assets/js/51.6df53b9a.js"><link rel="prefetch" href="/assets/js/52.b52ded01.js"><link rel="prefetch" href="/assets/js/53.f6971602.js"><link rel="prefetch" href="/assets/js/54.afc58e15.js"><link rel="prefetch" href="/assets/js/55.76afbbac.js"><link rel="prefetch" href="/assets/js/56.24dd1be3.js"><link rel="prefetch" href="/assets/js/57.37d962d7.js"><link rel="prefetch" href="/assets/js/58.804466e0.js"><link rel="prefetch" href="/assets/js/59.fb4493d2.js"><link rel="prefetch" href="/assets/js/6.e848c396.js"><link rel="prefetch" href="/assets/js/60.5294038a.js"><link rel="prefetch" href="/assets/js/61.e9641427.js"><link rel="prefetch" href="/assets/js/62.82c19408.js"><link rel="prefetch" href="/assets/js/63.73417db4.js"><link rel="prefetch" href="/assets/js/64.4d539d0c.js"><link rel="prefetch" href="/assets/js/65.067b0a44.js"><link rel="prefetch" href="/assets/js/66.134e47ed.js"><link rel="prefetch" href="/assets/js/67.215752d9.js"><link rel="prefetch" href="/assets/js/68.505b9316.js"><link rel="prefetch" href="/assets/js/69.c3a35b4b.js"><link rel="prefetch" href="/assets/js/7.48c7c86b.js"><link rel="prefetch" href="/assets/js/70.7187e37b.js"><link rel="prefetch" href="/assets/js/71.da724536.js"><link rel="prefetch" href="/assets/js/72.f9bcdcbd.js"><link rel="prefetch" href="/assets/js/73.2d6d6ec5.js"><link rel="prefetch" href="/assets/js/74.d4b0bf9b.js"><link rel="prefetch" href="/assets/js/75.f5e312f2.js"><link rel="prefetch" href="/assets/js/76.080f3811.js"><link rel="prefetch" href="/assets/js/77.5454afe1.js"><link rel="prefetch" href="/assets/js/78.05a4e5ff.js"><link rel="prefetch" href="/assets/js/79.5a7c7b01.js"><link rel="prefetch" href="/assets/js/80.99648c3f.js"><link rel="prefetch" href="/assets/js/81.d3b3e1fa.js"><link rel="prefetch" href="/assets/js/82.9254eed7.js"><link rel="prefetch" href="/assets/js/83.f85d29db.js"><link rel="prefetch" href="/assets/js/84.857fff65.js"><link rel="prefetch" href="/assets/js/85.b00b52e4.js"><link rel="prefetch" href="/assets/js/86.819f22a3.js"><link rel="prefetch" href="/assets/js/87.ce37c997.js"><link rel="prefetch" href="/assets/js/88.ddeada6d.js"><link rel="prefetch" href="/assets/js/89.a5198125.js"><link rel="prefetch" href="/assets/js/90.59cc52f3.js"><link rel="prefetch" href="/assets/js/91.9cf30003.js"><link rel="prefetch" href="/assets/js/93.42254cda.js"><link rel="prefetch" href="/assets/js/94.60d2b0a5.js"><link rel="prefetch" href="/assets/js/95.988aca80.js"><link rel="prefetch" href="/assets/js/96.7c4c9b3a.js"><link rel="prefetch" href="/assets/js/97.cab16d59.js"><link rel="prefetch" href="/assets/js/98.bf2c66e9.js"><link rel="prefetch" href="/assets/js/99.331b8148.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.4dff5a50.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7911914d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">BenHang</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Web" class="dropdown-title"><span class="title">Web</span> <span class="arrow down"></span></button> <button type="button" aria-label="Web" class="mobile-dropdown-title"><span class="title">Web</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/ECMA/" class="nav-link">
+  ECMA
+</a></li><li class="dropdown-item"><!----> <a href="/TypeScript/" class="nav-link">
+  TypeScript
+</a></li></ul></div></div><div class="nav-item"><a href="/Browser/" class="nav-link">
+  Browser
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue2/" class="nav-link router-link-active">
+  Vue2
+</a></li><li class="dropdown-item"><!----> <a href="/vue3/" class="nav-link">
+  Vue3
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress/" class="nav-link">
+  VuePress
+</a></li></ul></div></div><div class="nav-item"><a href="/React/" class="nav-link">
+  React
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Library" class="dropdown-title"><span class="title">Library</span> <span class="arrow down"></span></button> <button type="button" aria-label="Library" class="mobile-dropdown-title"><span class="title">Library</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/jquery/" class="nav-link">
+  JQuery
+</a></li><li class="dropdown-item"><!----> <a href="/EChart/" class="nav-link">
+  EChart
+</a></li></ul></div></div><div class="nav-item"><a href="/Doc/" class="nav-link">
+  Doc
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Web" class="dropdown-title"><span class="title">Web</span> <span class="arrow down"></span></button> <button type="button" aria-label="Web" class="mobile-dropdown-title"><span class="title">Web</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/ECMA/" class="nav-link">
+  ECMA
+</a></li><li class="dropdown-item"><!----> <a href="/TypeScript/" class="nav-link">
+  TypeScript
+</a></li></ul></div></div><div class="nav-item"><a href="/Browser/" class="nav-link">
+  Browser
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue2/" class="nav-link router-link-active">
+  Vue2
+</a></li><li class="dropdown-item"><!----> <a href="/vue3/" class="nav-link">
+  Vue3
+</a></li><li class="dropdown-item"><!----> <a href="/vuepress/" class="nav-link">
+  VuePress
+</a></li></ul></div></div><div class="nav-item"><a href="/React/" class="nav-link">
+  React
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Library" class="dropdown-title"><span class="title">Library</span> <span class="arrow down"></span></button> <button type="button" aria-label="Library" class="mobile-dropdown-title"><span class="title">Library</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/jquery/" class="nav-link">
+  JQuery
+</a></li><li class="dropdown-item"><!----> <a href="/EChart/" class="nav-link">
+  EChart
+</a></li></ul></div></div><div class="nav-item"><a href="/Doc/" class="nav-link">
+  Doc
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Vue2</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue2/脚手架的搭建.html" class="sidebar-link">脚手架的搭建</a></li><li><a href="/vue2/二级路由配置.html" class="sidebar-link">二级路由配置</a></li><li><a href="/vue2/引入JQuery.html" class="sidebar-link">引入JQuery</a></li><li><a href="/vue2/父子组件之间的传值.html" class="sidebar-link">父子组件之间的传值</a></li><li><a href="/vue2/兄弟组件之间的传值.html" class="sidebar-link">兄弟组件之间的传值</a></li><li><a href="/vue2/父组件axios传值给子组件.html" class="sidebar-link">父组件axios传值给子组件</a></li><li><a href="/vue2/编程式导航.html" class="sidebar-link">编程式导航</a></li><li><a href="/vue2/VueX.html" class="sidebar-link">Vuex</a></li><li><a href="/vue2/日历插件.html" class="sidebar-link">日历插件</a></li><li><a href="/vue2/vue-qr 边框的问题.html" class="sidebar-link">vue-qr 边框问题</a></li><li><a href="/vue2/数组和对象不能直接赋值.html" class="sidebar-link">数组和对象不能直接赋值</a></li><li><a href="/vue2/左侧菜单点击添加样式.html" class="sidebar-link">左侧菜单点击添加样式</a></li><li><a href="/vue2/Npm发布自己的Vue组件.html" class="sidebar-link">Npm发布自己的Vue组件</a></li><li><a href="/vue2/Better-scroll滚动.html" class="sidebar-link">Better-scroll滚动</a></li><li><a href="/vue2/Better-scroll滚动失效.html" class="sidebar-link">Better-scroll滚动失效</a></li><li><a href="/vue2/FormInputs组件的使用.html" class="sidebar-link">FormInputs组件的使用</a></li><li><a href="/vue2/Swiper轮播.html" class="sidebar-link">Swiper轮播</a></li><li><a href="/vue2/wangEditor自定义图片上传.html" class="active sidebar-link">wangEditor自定义图片上传</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vue2/wangEditor自定义图片上传.html#_1、创建编辑器组件" class="sidebar-link">1、创建编辑器组件</a></li><li class="sidebar-sub-header"><a href="/vue2/wangEditor自定义图片上传.html#_2、创建图片选择组件" class="sidebar-link">2、创建图片选择组件</a></li><li class="sidebar-sub-header"><a href="/vue2/wangEditor自定义图片上传.html#_3、修改wangedit-js" class="sidebar-link">3、修改wangEdit.js</a></li></ul></li><li><a href="/vue2/移动端富文本vue-m-quill-editor.html" class="sidebar-link">移动端富文本vue-m-quill-editor</a></li><li><a href="/vue2/vue-m-quill-editor自动获取焦点.html" class="sidebar-link">vue-m-quill-editor自动获取焦点</a></li><li><a href="/vue2/iview报错Parsing error解决方案.html" class="sidebar-link">iview报错Parsing error解决方案</a></li><li><a href="/vue2/webpack下载缓慢问题.html" class="sidebar-link">webpack下载缓慢问题</a></li><li><a href="/vue2/vue对接腾讯地图.html" class="sidebar-link">vue对接腾讯地图</a></li><li><a href="/vue2/用户登录及token验证.html" class="sidebar-link">用户登录及token验证</a></li><li><a href="/vue2/Vue异步化组件按需加载.html" class="sidebar-link">Vue异步化组件按需加载</a></li><li><a href="/vue2/history nginx配置.html" class="sidebar-link">history nginx配置</a></li><li><a href="/vue2/Vue打包上线之后部分CSS不生效.html" class="sidebar-link">Vue打包上线之后部分CSS不生效</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="wangeditor自定义图片上传"><a href="#wangeditor自定义图片上传" class="header-anchor">#</a> wangEditor自定义图片上传</h1> <h2 id="_1、创建编辑器组件"><a href="#_1、创建编辑器组件" class="header-anchor">#</a> 1、创建编辑器组件</h2> <p>Editor.vue</p> <div><div id="imgUpbtn"></div> <input type="hidden" id="imgs"> <div id="insertBtn"></div> <div id="weditor"></div> <img-list></img-list></div> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+	<span class="token keyword">import</span> <span class="token constant">E</span> <span class="token keyword">from</span> <span class="token string">'wangeditor'</span>
+	<span class="token keyword">import</span> ImgList <span class="token keyword">from</span> <span class="token string">'./ImgList'</span>
+	<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+		<span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Editor'</span><span class="token punctuation">,</span>
+		<span class="token literal-property property">components</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+			ImgList
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+		<span class="token literal-property property">props</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+			<span class="token literal-property property">content</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+				<span class="token literal-property property">type</span><span class="token operator">:</span> String<span class="token punctuation">,</span>
+				<span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+					<span class="token keyword">return</span> <span class="token string">''</span>
+				<span class="token punctuation">}</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+		<span class="token function">mounted</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">initEditor</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+		<span class="token function">data</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword">return</span> <span class="token punctuation">{</span>
+				<span class="token literal-property property">imgs</span><span class="token operator">:</span> <span class="token string">''</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+		<span class="token literal-property property">methods</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+			<span class="token comment">// 显示图片选择层</span>
+			<span class="token function">handleClick</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token keyword">this</span><span class="token punctuation">.</span>$refs<span class="token punctuation">.</span>drawer<span class="token punctuation">.</span>isShow <span class="token operator">=</span> <span class="token boolean">true</span>
+			<span class="token punctuation">}</span><span class="token punctuation">,</span>
+			<span class="token comment">// 接受传递过来的图片链接，并插入到编辑器</span>
+			<span class="token function">getImgs</span> <span class="token punctuation">(</span><span class="token parameter">imgs</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token comment">// 传递过来的是一个数组，数组转字符串</span>
+				<span class="token keyword">this</span><span class="token punctuation">.</span>imgs <span class="token operator">=</span> imgs<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">'|#|'</span><span class="token punctuation">)</span>
+                            <span class="token comment">// 解决数据同步问题</span>
+				<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$nextTick</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+					document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'insertBtn'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+				<span class="token punctuation">}</span><span class="token punctuation">)</span>
+				<span class="token comment">// 隐藏选择层</span>
+				<span class="token keyword">this</span><span class="token punctuation">.</span>$refs<span class="token punctuation">.</span>drawer<span class="token punctuation">.</span>arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+				<span class="token keyword">this</span><span class="token punctuation">.</span>$refs<span class="token punctuation">.</span>drawer<span class="token punctuation">.</span>isShow <span class="token operator">=</span> <span class="token boolean">false</span>
+			<span class="token punctuation">}</span><span class="token punctuation">,</span>
+			<span class="token comment">// 进行上传操作</span>
+			<span class="token function">initEditor</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token comment">// 初始化编辑器</span>
+				<span class="token keyword">let</span> editor <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">E</span><span class="token punctuation">(</span><span class="token string">'weditor'</span><span class="token punctuation">)</span>
+				<span class="token comment">// 编辑器配置</span>
+				editor<span class="token punctuation">.</span>config<span class="token punctuation">.</span>menus <span class="token operator">=</span> <span class="token punctuation">[</span>
+					<span class="token string">'source'</span><span class="token punctuation">,</span>
+					<span class="token string">'|'</span><span class="token punctuation">,</span>
+					<span class="token string">'fontsize'</span><span class="token punctuation">,</span>
+					<span class="token string">'bold'</span><span class="token punctuation">,</span>
+					<span class="token string">'eraser'</span><span class="token punctuation">,</span>
+					<span class="token string">'forecolor'</span><span class="token punctuation">,</span>
+					<span class="token string">'|'</span><span class="token punctuation">,</span>
+					<span class="token string">'img'</span><span class="token punctuation">,</span>
+					<span class="token string">'link'</span><span class="token punctuation">,</span>
+					<span class="token string">'unlink'</span><span class="token punctuation">,</span>
+					<span class="token string">'table'</span><span class="token punctuation">,</span>
+					<span class="token string">'|'</span><span class="token punctuation">,</span>
+					<span class="token string">'alignleft'</span><span class="token punctuation">,</span>
+					<span class="token string">'aligncenter'</span><span class="token punctuation">,</span>
+					<span class="token string">'alignright'</span><span class="token punctuation">,</span>
+					<span class="token string">'|'</span><span class="token punctuation">,</span>
+					<span class="token string">'undo'</span><span class="token punctuation">,</span>
+					<span class="token string">'redo'</span><span class="token punctuation">,</span>
+					<span class="token string">'fullscreen'</span>
+				<span class="token punctuation">]</span>
+				<span class="token comment">// 编辑器渲染</span>
+				editor<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+				<span class="token comment">// 编辑器高度自适应</span>
+				document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'weditor'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">'style'</span><span class="token punctuation">,</span> <span class="token string">'height:auto;min-height:2rem'</span><span class="token punctuation">)</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br></div></div><h2 id="_2、创建图片选择组件"><a href="#_2、创建图片选择组件" class="header-anchor">#</a> 2、创建图片选择组件</h2> <p>ImgList.vue</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+	<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+		<span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'ImgList'</span><span class="token punctuation">,</span>
+		<span class="token function">data</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword">return</span> <span class="token punctuation">{</span>
+                           <span class="token comment">// 存储选择项</span>
+				<span class="token literal-property property">arr</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                            <span class="token comment">// 默认图层为隐藏</span>
+				<span class="token literal-property property">isShow</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+                            <span class="token comment">// 保存所选图片的url地址</span>
+				<span class="token literal-property property">getImgs</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                            <span class="token comment">// 获取到的图片集</span>
+                            <span class="token literal-property property">imgList</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+		<span class="token literal-property property">methods</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+			<span class="token comment">// 选择图片</span>
+			<span class="token function">selectImg</span> <span class="token punctuation">(</span><span class="token parameter">i</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>arr<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+					<span class="token keyword">this</span><span class="token punctuation">.</span>arr <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>arr<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">ele</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+						<span class="token keyword">return</span> ele <span class="token operator">!==</span> i
+					<span class="token punctuation">}</span><span class="token punctuation">)</span>
+				<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+					<span class="token keyword">this</span><span class="token punctuation">.</span>arr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+				<span class="token punctuation">}</span>
+			<span class="token punctuation">}</span><span class="token punctuation">,</span>
+			<span class="token comment">// 将选中的图片地址传出</span>
+			<span class="token function">insertImg</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token comment">// 获取图片链接地址</span>
+				<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span>arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                                <span class="token keyword">this</span><span class="token punctuation">.</span>getImgs<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>imgList<span class="token punctuation">[</span><span class="token keyword">this</span><span class="token punctuation">.</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+				<span class="token punctuation">}</span>
+                           <span class="token comment">// 将获取的图片内容以数组的形式传递个父组件Editor.vue</span>
+				<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$emit</span><span class="token punctuation">(</span><span class="token string">'getImgs'</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>getImgs<span class="token punctuation">)</span>
+				<span class="token comment">// 清空数组防止重复push</span>
+				<span class="token keyword">this</span><span class="token punctuation">.</span>getImgs <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br></div></div><h2 id="_3、修改wangedit-js"><a href="#_3、修改wangedit-js" class="header-anchor">#</a> 3、修改wangEdit.js</h2> <p>修改wangEdit.js中图片插入菜单</p> <p>本例中使用的时wangEditro2版本</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token comment">// img 菜单</span>
+<span class="token function">_e</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token constant">E</span><span class="token punctuation">,</span> $</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token constant">E</span><span class="token punctuation">.</span><span class="token function">createMenu</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">check</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> menuId <span class="token operator">=</span> <span class="token string">'img'</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">check</span><span class="token punctuation">(</span>menuId<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">var</span> editor <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+        <span class="token keyword">var</span> lang <span class="token operator">=</span> editor<span class="token punctuation">.</span>config<span class="token punctuation">.</span>lang<span class="token punctuation">;</span>
+
+        <span class="token comment">// 创建 menu 对象</span>
+        <span class="token keyword">var</span> menu <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">E<span class="token punctuation">.</span>Menu</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            <span class="token literal-property property">editor</span><span class="token operator">:</span> editor<span class="token punctuation">,</span>
+            <span class="token literal-property property">id</span><span class="token operator">:</span> menuId<span class="token punctuation">,</span>
+            <span class="token literal-property property">title</span><span class="token operator">:</span> lang<span class="token punctuation">.</span>img
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// 插入图片</span>
+        <span class="token function">$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span><span class="token string">'#insertBtn'</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token comment">// 获取页面存储的图片值</span>
+            <span class="token keyword">let</span> src <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#imgs'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">val</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">let</span> imgHtml <span class="token operator">=</span> <span class="token string">''</span>
+            <span class="token comment">// 判断字符串是否包含分隔符，用于多图插入</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>src<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">'|#|'</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment">// 分割成数组</span>
+                <span class="token keyword">let</span> arr <span class="token operator">=</span> src<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'|#|'</span><span class="token punctuation">)</span>
+                <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    imgHtml <span class="token operator">+=</span> <span class="token string">'&lt;img style=&quot;max-width:100%;&quot; src=&quot;'</span><span class="token operator">+</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">+</span><span class="token string">'&quot;/&gt;'</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
+                imgHtml <span class="token operator">=</span> <span class="token string">'&lt;img style=&quot;max-width:100%;&quot; src=&quot;'</span><span class="token operator">+</span>src<span class="token operator">+</span><span class="token string">'&quot;/&gt;'</span>
+            <span class="token punctuation">}</span>
+            editor<span class="token punctuation">.</span><span class="token function">command</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> <span class="token string">'insertHtml'</span><span class="token punctuation">,</span> imgHtml<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token comment">// 点击事件</span>
+        menu<span class="token punctuation">.</span><span class="token function-variable function">clickEvent</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">var</span> menu <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+            <span class="token keyword">var</span> dropPanel <span class="token operator">=</span> menu<span class="token punctuation">.</span>dropPanel<span class="token punctuation">;</span>
+            <span class="token comment">// 在此打开图片选择页面</span>
+            document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'imgUpbtn'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
+        <span class="token punctuation">}</span>
+        <span class="token comment">// 增加到editor对象中</span>
+        editor<span class="token punctuation">.</span>menus<span class="token punctuation">[</span>menuId<span class="token punctuation">]</span> <span class="token operator">=</span> menu<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vue2/Swiper轮播.html" class="prev">
+        Swiper轮播
+      </a></span> <span class="next"><a href="/vue2/移动端富文本vue-m-quill-editor.html">
+        移动端富文本vue-m-quill-editor
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.ed3c4a1c.js" defer></script><script src="/assets/js/2.2b22f60d.js" defer></script><script src="/assets/js/1.ac6c8be2.js" defer></script><script src="/assets/js/92.2c277a0a.js" defer></script>
+  </body>
+</html>
